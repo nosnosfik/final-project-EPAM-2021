@@ -1,0 +1,27 @@
+{% extends 'base_template.html' %}
+{% block content %}
+<main class="form-signin text-center">
+    <form action="" method="post" name="login">
+        {{ form.hidden_tag() }}
+        <h1 class="h3 mb-3 fw-normal">New employee</h1>
+        <div class="form-floating">
+            {{ form.employee_name(class='form-control', id="floatingInput", placeholder='name') }}
+            <label for="floatingInput">Name</label>
+        </div>
+        <div class="form-floating">
+            {{ form.salary(class='form-control', id="floatingInput", placeholder='salary') }}
+            <label for="floatingInput">Salary</label>
+        </div>
+        <div class="form-floating">
+            {{ form.date_of_birth(class="form-control", id="floatingPassword", placeholder="d_o_b") }}
+            <label for="floatingInput">Date of birth</label>
+        </div>
+        <div class="form-floating">
+            {{ form.department_id(class="form-control", id="floatingPassword", placeholder="dep_id") }}
+            <label for="floatingInput">Department</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Create</button>
+    </form>
+</main>
+
+{% endblock %}

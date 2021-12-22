@@ -1,0 +1,13 @@
+{% extends 'base_template.html' %}
+{% block content %}
+    <main class="form-signin text-center">
+        <form action="" method="post" name="login">
+            {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 fw-normal">Update department</h1>
+            <div class="form-floating">
+                {{ form.department_name(class='form-control', id="floatingInput", placeholder='name') }}
+                <label for="floatingInput">Name</label>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Update</button>
+        </form>
+    </main>
+{% endblock %}
