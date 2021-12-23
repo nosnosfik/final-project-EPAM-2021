@@ -5,3 +5,13 @@ python:
 
 env:
   - FLASK_TESTING=True
+
+install:
+  - 'pip install -r requirements.txt'
+
+jobs:
+  include:
+    - script: make lint-check
+      name: "Lint Checks"
+    - script: make unit-test
+      name: "Unit Tests"
