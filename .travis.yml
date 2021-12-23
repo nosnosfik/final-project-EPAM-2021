@@ -11,5 +11,6 @@ install:
 
 jobs:
   include:
-    - script: make unit-test
+    - stage "App Tests"
+      script: python tests.py
       name: "Unit Tests"
