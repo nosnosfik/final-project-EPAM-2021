@@ -7,8 +7,3 @@ env:
 
 install:
   - 'pip install -r requirements.txt'
-
-jobs:
-  include:
-    - stage "App Tests"
-      name: "Unit Tests"
