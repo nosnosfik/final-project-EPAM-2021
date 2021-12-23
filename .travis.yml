@@ -10,4 +10,3 @@ install:
 
 script:
   -python tests.py
-  name: "Unit Tests"
