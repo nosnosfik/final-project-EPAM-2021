@@ -2,5 +2,12 @@ language: python
 python:
   - "3.9"
 
+env:
+  - FLASK_TESTING=True
+
 install:
   - 'pip install -r requirements.txt'
+
+script:
+  -python tests.py
+  name: "Unit Tests"
